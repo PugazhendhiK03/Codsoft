@@ -1,0 +1,166 @@
+:root{
+    --color1: #242020;
+    --color2: #fff;
+    --color3: ;
+    --color4: ;
+    --color5: ;
+    --color6: ;
+}
+
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--color1);
+    color: var(--color2);
+}
+
+/* header start */
+.header{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background: blue; */
+    padding-top: 1rem;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navlist{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    
+}
+
+.navlist > li > a{
+    color: var(--color2);
+    font-size: 16px;
+    padding: .5rem 1rem;
+}
+
+.navlist > li > a:hover{
+    background: rgba(255, 255, 255, 0.26); 
+    border-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: .4s;
+}
+
+
+
+.logo{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.logo > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.chat-btn{
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color2);
+    background: none;
+    padding: .5rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.chat-btn:hover{
+    background: rgba(255, 255, 255, 0.26); 
+    border-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    transition: .4s;
+}
+
+
+
+/* profile */
+.profile{
+    display: flex;
+}
+
+.p-content{
+    width: 25%;
+    /* background-color: red; */
+}
+.p-empty{
+    width: 75%;
+    /* background-color: green; */
+}
+
+
+
+
+
+
+
+
+/* header end */
+
+
+
+.main{
+    display: flex;
+}
+.m-empty{
+    width: 25%;
+    /* background-color: yellow; */
+}
+.m-content{
+    width: 75%;
+}
+.m-content > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media only screen and (min-width:980px){
+    .mobile{
+        display: none;
+    }
+    .cls-btn{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 980px){
+    .navlist{
+        display: none;
+    }
+    .navbar{
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}
+
+

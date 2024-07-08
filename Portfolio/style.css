@@ -1,7 +1,7 @@
 :root {
-    --color1: #242020;
+    --color1: #080808;
     --color2: #fff;
-    --color3: ;
+    --color3: #101010;
     --color4: ;
     --color5: ;
     --color6: ;
@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: var(--color1);
     color: var(--color2);
     padding: 0;
@@ -51,6 +51,9 @@ body {
     border-radius: 50%;
     
     /* filter: invert(100%); */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .navlist{
@@ -59,24 +62,29 @@ body {
     gap: 2rem;
     padding: 1rem;
 
-    background: rgba(255, 255, 255, 0.2); 
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px); 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.navlist > li > a {
-    color: var(--color2);
-    font-size: 16px;
-    padding: .5rem;
     /* background: rgba(255, 255, 255, 0.2); 
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px); 
   border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+.navlist > li > a {
+    color: var(--color2);
+    font-size: 16px;
+    padding: .5rem;
+    /* background: rgba(255, 255, 255, 0.2);  */
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); 
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+.m-content > img{
+    width: 100%;
+    height: 100%;
 }
 
 .chat-btn{
@@ -120,13 +128,14 @@ body {
     align-items: center;
     padding: 1rem;
     border-radius: 20px;
+    background: var(--color3);
 
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  */
   /* backdrop-filter: blur(5px);  */
   /* -webkit-backdrop-filter: blur(5px);  */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .profile > img{
@@ -146,6 +155,7 @@ body {
     /* width: 15rem; */
     color: var(--color2);
     border-radius: 10px;
+    cursor: pointer;
     background: linear-gradient(to bottom right, rgb(253, 185, 196), rgb(192, 124, 192));
 }
 
@@ -160,7 +170,7 @@ body {
     color: var(--color2);
     font-size: 1.4rem;
     border: 1px solid var(--color2);
-    padding: .3rem .5rem;
+    padding: .3rem .6rem;
     border-radius: 50%;
     
     display: inline-block;
@@ -187,12 +197,36 @@ body {
     top: 7rem;
 }
 
-.m-content > img{
-    width: 100%;
-    height: 100%;
+.intro{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 450px;
+    /* background-color: red; */
+    justify-content: center;
+    padding: 3rem;
 }
 
+.intro > span{
+    background: linear-gradient(to bottom right, rgb(253, 185, 196), rgb(192, 124, 192)); /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
 
+.i-greet{
+    font-size: 30px;
+}
+
+.i-name{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.i-role{
+    font-size: 30px;
+}
 
 
 
@@ -264,10 +298,86 @@ body {
         position: relative;
         top: 10rem;
     }
+
+    .profile{
+        width: 30%;
+    }
 }
 
+@media screen and (max-width: 1024px){
+    .navlist{
+        gap: 1rem;
+    }
+}
 
+@media screen and (max-width: 768px){
+    .profile{
+        width: 40%;
+    }
+    .m-content{
+        top: 5rem;
+    }
+}
 
+@media screen and (max-width: 638px){
+    .profile{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:550px){
+    .i-greet{
+        font-size: 25px;
+    }
+    .i-name{
+        font-size: 35px;
+    }
+    .i-role{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .i-greet{
+        font-size: 20px;
+    }
+    .i-name{
+        font-size: 25px;
+    }
+    .i-role{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .profile{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .profile{
+        width: 85%;
+    }
+    .i-name{
+        font-size: 20px;
+    }
+    .i-role{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .profile{
+        width: 85%;
+    }
+    .i-name{
+        font-size: 20px;
+    }
+    .i-role{
+        font-size: 16px;
+    }
+}
 
 
 

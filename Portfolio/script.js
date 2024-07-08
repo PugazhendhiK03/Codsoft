@@ -1,7 +1,13 @@
-function openSidebar() {
-    document.getElementById("sidebar").style.right = "0";
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.getElementById("close-btn");
 
-function closeSidebar() {
-    document.getElementById("sidebar").style.right = "-100%";
-}
+    menuIcon.addEventListener("click", function () {
+        sidebar.classList.toggle("open");
+    });
+
+    closeBtn.addEventListener("click", function () {
+        sidebar.classList.remove("open");
+    });
+});

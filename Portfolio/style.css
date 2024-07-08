@@ -30,6 +30,7 @@ body {
     position: fixed;
     /* background: blue; */
     width: 100%;
+    z-index: 1;
 }
 
 .navigation{
@@ -102,10 +103,12 @@ body {
 .profile{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    position: fixed;
+    top: 7rem;
+    left: 0;
 }
 
-.p-content{
+.profile{
     margin: 0 2rem;
     width: 20%;
     height: 480px;
@@ -121,22 +124,16 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
   /* backdrop-filter: blur(5px);  */
   /* -webkit-backdrop-filter: blur(5px);  */
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.p-content > .name{
-    font-size: 20px;
-}
-
-.p-content > .role{
-    font-size: 20px;
-}
-
-.p-content > img{
+.profile > img{
     width: 150px;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
+
+
 
 .resume-btn{
     font-size: 16px;
@@ -144,7 +141,7 @@ body {
     font-weight: 500;
     border: none;
     height: 3rem;
-    width: 15rem;
+    /* width: 15rem; */
     color: var(--color2);
     border-radius: 10px;
     background: linear-gradient(to bottom right, rgb(253, 185, 196), rgb(192, 124, 192));
@@ -162,12 +159,6 @@ body {
 }
 
 
-.p-empty{
-    width: 75%;
-    /* background-color: green; */
-    display: none;
-}
-
 
 .main{
     width: 100%;
@@ -175,12 +166,12 @@ body {
     flex-direction: row;
 }
 
-.m-empty{
-    width: 25%;
-}
 
 .m-content{
     width: 75%;
+    position: absolute;
+    right: 0;
+    top: 7rem;
 }
 
 .m-content > img{
@@ -203,7 +194,7 @@ body {
     right: -250px;
     width: 250px;
     height: 100%;
-    background: var(--color1);
+    /* background: var(--color1); */
     padding: 20px;
     transition: right 0.3s;
     z-index: 1000;
@@ -224,9 +215,17 @@ body {
 }
 
 #sidebar .close-btn {
-    align-self: flex-end;
+    align-self: flex-start;
     font-size: 24px;
     cursor: pointer;
+    padding: 0 .5rem;
+
+    background: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px); 
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive Styles */
@@ -239,5 +238,17 @@ body {
     }
     #sidebar {
         display: flex;
+    }
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile{
+        position: relative;
+        width: 25%;
+    }
+    .m-content{
+        position: relative;
+        top: 10rem;
     }
 }

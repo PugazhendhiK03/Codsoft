@@ -1,0 +1,106 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #076585;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    /* background: #333; */
+    color: #fff;
+    padding: 1em 0;
+        background: #076585;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e8f9ff, #036d91); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header .logo {
+    float: left;
+    font-size: 1.5em;
+}
+
+.logo > img{
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.features, .testimonials, .cta, footer {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.features h2, .testimonials h2, .cta h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.feature {
+    margin-bottom: 1em;
+}
+
+.testimonial {
+    margin-bottom: 1em;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+}
+
+footer > div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .socials a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 24px;
+}

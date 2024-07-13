@@ -5,6 +5,7 @@
     --color4: linear-gradient(to bottom right, rgb(102, 141, 192), rgb(124, 173, 192));
     --color5: rgba(23, 119, 175, 0.667);
     --color6: rgba(24, 164, 199, 0.89);
+    --color7: rgba(255, 33, 33, 0.667);
 }
 
 * {
@@ -142,6 +143,12 @@ body {
     border-radius: 10px;
     background: var(--color4);
     cursor: pointer;
+}
+
+.resume-btn > a{
+    font-size: 16px;
+    color: var(--color2);
+    font-weight: 500;
 }
 
 .btn{
@@ -333,6 +340,7 @@ body {
 .a-content{
     padding: 2rem 1rem;
     text-align: justify;
+    font-size: 18px;
 }
 
 .a-title{
@@ -381,12 +389,28 @@ body {
 
 
 
+.i-title{
+    font-size: 20px;
+    color: var(--color6);
+    padding: 1rem 0rem;
+}
+.i-content{
+    padding: 1rem;
+    font-size: 18px;
+}
+
+
 /* skills */
 
 .skills{
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    gap: 1rem;
+}
+
+.skills > h2{
+    font-size: 30px;
 }
 
 .s-grid{
@@ -405,7 +429,7 @@ body {
     background: var(--color3);
     margin: 10px;
     border-radius: 10px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.5s, transform 0.5s;
 }
 
 .s-card:hover{
@@ -417,7 +441,10 @@ body {
 
 .s-card > img{
     width: 100px;
+    height: 100px;
+    transform: scale(0.9);
 }
+
 
 .js{
     border-radius: 50%;
@@ -427,6 +454,83 @@ body {
     border-radius: 50%;
 }
 
+
+
+/* projects */
+
+
+
+
+/* contact */
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+.c-title{
+    display: flex;
+    width: 100%;
+}
+
+.c-title > h2{
+    font-size: 30px;
+}
+
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--color3);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contactForm > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contactForm > div > label{
+    font-size: 20px;
+}
+
+.contactForm > div > input{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: .5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.contactForm > div > textarea{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: .5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+
+.c-btn{
+    font-size: 18px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--color2);
+    border: none;
+    background: var(--color4);
+    border-radius: 5px;
+}
+
+.msg{
+    font-size: 16px;
+    color: var(--color7);
+}
 
 
 
@@ -492,6 +596,9 @@ body {
     .s-grid{
         grid-template-columns: repeat(4, 2fr);
     }
+    .a-content, .i-content{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 638px){
@@ -531,6 +638,34 @@ body {
     .i-role{
         font-size: 20px;
     }
+    .contactForm{
+        width: 100%;
+    }
+    .c-container{
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+    .contactForm > div {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contactForm > div > label{
+        font-size: 16px;
+    }
+    .contactForm > div > input{
+        font-size: 16px;
+        padding: 2px;
+        border-radius: 2px;
+    }
+    .contactForm > div > textarea{
+        font-size: 16px;
+        padding: 2px;
+        border-radius: 2px;
+    }
 }
 
 @media screen and (max-width: 425px){
@@ -561,6 +696,19 @@ body {
     .s-grid{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .contactForm > div > input{
+        width: 10rem;
+    }
+    .contactForm > div > textarea{
+        width: 10rem;
+    }
+    .c-btn{
+        font-size: 16px;
+    }
+    .a-content, .i-content{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 375px){
@@ -578,6 +726,15 @@ body {
     }
     .s-grid{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .contactForm > div > input{
+        width: 8rem;
+    }
+    .contactForm > div > textarea{
+        width: 8rem;
+    }
+    .c-btn{
+        font-size: 16px;
     }
 }
 

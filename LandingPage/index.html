@@ -3,90 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Create Stunning Landing Pages</title>
     <link rel="stylesheet" href="style.css">
         <!-- FontAwesome Icon Style -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="container">
-            <div class="logo"><img src="./img/Logo.png" alt=""></div>
-            <nav>
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#cta">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo"><img src="img/Logo.png" alt=""></div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <!-- Hero Section -->
+    
     <section class="hero">
-        <div class="container">
-            <!-- <img src="./img/background.webp" alt="background"> -->
-            <h1>Welcome to My Landing Page</h1>
-            <p>Your solution for amazing things.</p>
-            <button onclick="cta()">Get Started</button>
+        <div class="hero-main">
+            <h1>Create Stunning Landing Pages in Minutes</h1>
+        <p>Easily design and publish high-converting landing pages without any coding skills.</p>
+        <a href="#cta" class="btn">Get Started Now</a>
         </div>
     </section>
-
-    <!-- Features Section -->
+    
     <section id="features" class="features">
-        <div class="container">
-            <h2>Features</h2>
-            <div class="feature">
-                <h3>Feature One</h3>
-                <p>Detail about feature one.</p>
+        <h2>Features</h2>
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="img/drag.png" alt="Drag and Drop Builder">
             </div>
-            <div class="feature">
-                <h3>Feature Two</h3>
-                <p>Detail about feature two.</p>
+            <div class="feature-content">
+                <h3>Drag and Drop Builder</h3>
+                <p>Our intuitive drag and drop builder makes it easy to design beautiful landing pages.</p>
             </div>
-            <div class="feature">
-                <h3>Feature Three</h3>
-                <p>Detail about feature three.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="img/responsive.jfif" alt="Mobile Responsive">
+            </div>
+            <div class="feature-content">
+                <h3>Mobile Responsive</h3>
+                <p>All our templates are mobile responsive, ensuring your landing page looks great on any device.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="img/template.png" alt="Customizable Templates">
+            </div>
+            <div class="feature-content">
+                <h3>Customizable Templates</h3>
+                <p>Choose from a variety of customizable templates to suit your brand and style.</p>
             </div>
         </div>
     </section>
-
-    <!-- Testimonials Section -->
+    
     <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>What Our Users Say</h2>
-            <div class="testimonial">
-                <p>"This is an amazing product!"</p>
-                <span>- Happy Customer</span>
-            </div>
-            <div class="testimonial">
-                <p>"I love using this every day."</p>
-                <span>- Satisfied User</span>
-            </div>
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>"This tool made it so easy to create a professional-looking landing page." – Jane Doe</p>
+        </div>
+        <div class="testimonial">
+            <p>"I saw a 30% increase in sign-ups after using their service." – John Smith</p>
         </div>
     </section>
-
-    <!-- Call to Action Section -->
+    
     <section id="cta" class="cta">
-        <div class="container">
-            <h2>Ready to get started?</h2>
-            <button onclick="cta()">Sign Up Now</button>
-        </div>
+        <h2>Ready to Get Started?</h2>
+        <a href="#" class="btn">Start Your Free Trial</a>
+        <a href="#contact" class="btn secondary">Contact Us for More Information</a>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Landing Page. All rights reserved.</p>
-            <div class="socials">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-        </div>
+    
+    <footer id="contact">
+        <p>Follow us on social media:</p>
+        <ul class="social-links">
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+        <p>Contact us: info@landingpagecreator.com</p>
+        <p>&copy; 2024 LandingPageCreator. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
